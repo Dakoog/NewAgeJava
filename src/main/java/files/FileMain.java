@@ -14,11 +14,13 @@ class FileMain {
 
         isExistFile(myFile);
         createdNewFile(newFile);
-        writer(newFile);
         System.out.println("\nCreated new file: " + newFile);
+        writer(newFile);
 
     }
-    private  static void writer(File file ) throws FileNotFoundException {
+
+    // entering text in the file
+    private static void writer(File file) throws FileNotFoundException {
         PrintWriter printWriter = new PrintWriter(file);
         printWriter.println("28 lutego 2000");
         printWriter.println("Promienie słońca rozwijają pąki\n" +
@@ -27,11 +29,14 @@ class FileMain {
                 "A w sercu smutek, bo brak jest Ciebie.");
         printWriter.close();
     }
-    private static void createdNewFile(File file ) throws IOException {
+
+    // created new file for this project
+    private static void createdNewFile(File file) throws IOException {
         boolean newFile = file.createNewFile();
 
     }
 
+    // check if exists file
     private static void isExistFile(File file) throws FileNotFoundException {
         boolean exists = file.exists();
 
