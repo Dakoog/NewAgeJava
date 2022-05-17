@@ -1,21 +1,30 @@
 package lamdba;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 
 public class ListOfNames {
 
 
     private List<String> listOfFirstName() {
+
         List<String> firstNames = new ArrayList<>();
         firstNames.add("Dorota");
         firstNames.add("Zuzanna");
+        firstNames.add("Tamara");
         firstNames.add("Tomasz");
         firstNames.add("Krzysztof");
         firstNames.add("Anna");
         firstNames.add("Andrzej");
+        firstNames.add("Kacper");
+        firstNames.add("Życzysław");
+        firstNames.add("Iga");
         firstNames.add("Iwo");
         firstNames.add("Hermenegilda");
+
+        firstNames.sort(Comparator.comparingInt(String::length));
+
         return firstNames;
     }
 
